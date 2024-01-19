@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Edit Task</title>
+</head>
+<body>
+   <h1>Edit Task</h1>
+   <form action="/edit_task/{{ task.id }}" method="POST">
+       <input type="checkbox" name="completed" {{ 'checked' if task.completed else '' }}> Completed<br>
+       <input type="text" name="description" value="{{ task.description }}"><br>
+       <button type="submit">Save Changes</button>
+   </form>
+</body>
+</html>
